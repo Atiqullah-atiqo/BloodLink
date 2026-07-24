@@ -1,0 +1,203 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Blood Link | Splash</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#d23136",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fff8f7",
+                        "surface-container-low": "#fff0ef",
+                        "on-tertiary-fixed-variant": "#930015",
+                        "surface-variant": "#f9dcd9",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#410004",
+                        "surface-dim": "#f1d3d0",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ffedeb",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "outline": "#8f6f6c",
+                        "on-tertiary-container": "#fff2f1",
+                        "surface-tint": "#ba1a20",
+                        "secondary": "#5d5f5f",
+                        "surface-container-high": "#ffe2de",
+                        "secondary-container": "#dfe0e0",
+                        "outline-variant": "#e4beba",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#f9dcd9",
+                        "background": "#fff8f7",
+                        "tertiary-fixed-dim": "#ffb3ae",
+                        "on-secondary-container": "#616363",
+                        "tertiary-fixed": "#ffdad7",
+                        "surface-container": "#ffe9e7",
+                        "tertiary": "#af1321",
+                        "primary": "#af101a",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-background": "#271816",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-surface": "#271816",
+                        "inverse-surface": "#3e2c2a",
+                        "inverse-primary": "#ffb3ac",
+                        "on-surface-variant": "#5b403d",
+                        "on-primary-fixed": "#410003",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#fff2f0",
+                        "primary-fixed": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#d32f2f",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-bright": "#fff8f7",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-primary-fixed-variant": "#930010",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "margin-desktop": "64px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes subtleScale {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .watermark-subtle {
+            opacity: 0.08; /* Approx 10% as requested */
+            filter: grayscale(100%) contrast(1.2);
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest overflow-hidden h-screen w-full selection:bg-primary-fixed selection:text-on-primary-fixed" data-mode="connect">
+<main class="relative h-full w-full flex justify-center bg-white overflow-hidden">
+<!-- Background Watermark -->
+<div class="absolute inset-0 z-0 flex items-center justify-center overflow-hidden pointer-events-none">
+<img alt="Subtle emotional illustration of a human connection through donation" class="watermark-subtle w-4/5 max-w-2xl transform scale-125 opacity-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMocpoF46qA4NdhUik9VGEpSGuqN-H2FLOs2eWN5TVHZqp97eLbk46_Oljk18qaQFu7ge8jA7oCYiURVogmSPnCv5lXMAAaFPqAb5fixZshoG0WXCq5BoRPYOgjQe3tYKUkDVCCiCu1CUpdJ84LR1MpvorLu8ehpl2WinqnPUmLY2WM2lvIyepS-FjbKMwXpBWWz6CVvmWeAcBrJuN87sy7-wADDDnJR7J9v7hxl0ibu_u6p_yOoKNvUB02AxkMOvRkcuk2spO8ho">
+</div>
+<!-- Content Container -->
+<div class="relative z-10 flex flex-col items-center px-lg text-center animate-fade-in pt-32">
+<!-- 3D Blood Drop Centerpiece -->
+<div class="animate-float drop-shadow-2xl mb-md">
+<img alt="Realistic glowing 3D blood drop centerpiece" class="w-48 h-48 md:w-64 md:h-64 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABFVoIpI1kjwthrGwAv2mJjK3kTmYrvTzx3YpvmgHHKY5MLPrpCOa5StQD6u9M_cM4mLgRdDaqfR26K-yhYY63dGuC0GZy7143egKlRaXeyXo8yOoqV2KKnydesygbmLAA7z1xqnUFNga3OXC_8HnsCg8n1zQ8Q5ViCOzsvzZkQYFvx_Xgb2tbVuYKQyynRILTPR_V0N2rzGGSrJHnbOeXC_qHkG5A7U1XVCQJSLDEEFm1-1lov5F2E9SjyorJ8vsrHdxD4oru8qXKYw">
+</div>
+<!-- Brand Identity -->
+<div class="space-y-xs">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">Blood Link</h1>
+<!-- Hidden label for accessibility/SEO, keeping visual minimalist -->
+
+</div>
+<!-- Atmosphere / Loading Indicator (Subtle) -->
+<div class="mt-32 flex space-x-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary/20 animate-pulse"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary/40 animate-pulse delay-75"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary/20 animate-pulse delay-150"></div>
+</div>
+</div>
+<!-- Subtle Glass Highlight Effect -->
+<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-primary/5 pointer-events-none"></div>
+</main>
+<script>
+        // Micro-interaction for device orientation parallax if supported
+        window.addEventListener('deviceorientation', (event) => {
+            const drop = document.querySelector('.animate-float');
+            const watermark = document.querySelector('.watermark-subtle');
+            
+            if (event.beta && event.gamma) {
+                const x = event.gamma / 30; // -3 to 3 range roughly
+                const y = event.beta / 30;
+                
+                if (drop) {
+                    drop.style.transform = `translate(${x * 5}px, ${y * 5}px)`;
+                }
+                if (watermark) {
+                    watermark.style.transform = `scale(1.25) translate(${-x * 10}px, ${-y * 10}px)`;
+                }
+            }
+        });
+
+        // Simulating the transition out of splash screen after a delay
+        // This is just a UI demonstration of "premium feel"
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Blood Link splash screen initialized.');
+        });
+    </script>
+
+
+
+
+
+
+</body></html>
